@@ -1,0 +1,49 @@
+.form-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #212121;
+    border: 2px solid #0056b3;
+    border-radius: 10px;
+  }
+  
+  .form-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .form-container input,
+  .form-container textarea {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #333;
+    background-color: #333;
+    color: white;
+  }
+  
+  .form-buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .form-buttons button {
+    padding: 15px;
+    border-radius: 5px;
+  }
+  
+  .form-buttons .delete-button {
+    background-color: #d9534f;
+    color: white;
+  }
+  
+  .form-buttons .delete-button:hover {
+    background-color: #c9302c;
+  }
+  

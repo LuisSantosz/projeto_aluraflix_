@@ -1,25 +1,37 @@
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import Home from './components/Home';
+import NewVideo from './components/NewVideo';
+import Footer from './components/Footer';
+import { VideoProvider } from './VideoContext';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <VideoProvider>
+      <Router>
+        <div className="app">
+          <div className="navbar">
+            <div className="logo">Aluraflix</div>
+            <div>
+              <Link to="/">Home</Link>
+              <Link to="/new-video">Novo Vídeo</Link>
+            </div>
+          </div>
+          <div className="content">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/new-video" element={<NewVideo />} />
+            </Routes>
+          </div>
+          <Footer />
+        </div>
+      </Router>
+    </VideoProvider>
   );
 }
 
 export default App;
+
+
+
